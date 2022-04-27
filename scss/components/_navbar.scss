@@ -6,7 +6,7 @@
   padding: 0;
 
   .navbar-toggler {
-    margin: $global-padding;
+    margin: -0.5rem;
     font-size: $h6-font-size;
   }
 }
@@ -16,7 +16,8 @@
 
   .nav-link {
     padding: 0;
-    font-size: $h6-font-size;
+    font-size: 1rem;
+    font-weight: 400;
 
     &:hover,
     &:focus {
@@ -25,28 +26,352 @@
   }
 }
 
+/*
 .menu--main {
-  &.block {}
+  &.block {
+    margin: 0 0 $medium;
+  }
 
   .navbar-nav {
     .nav-link {
+      padding: $xxx-small $large $small;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
 
       &:hover,
-      &:focus {}
+      &:focus {
+        text-decoration: none;
+        cursor: pointer;
+      }
 
-      span {}
+      span {
+        border-bottom-width: $border-width-heavy;
+        border-bottom-style: $border-style;
+        padding-bottom: $xx-small;
+      }
+    }
+
+    @media #{$wide} {
+      margin-left: -$large;
+    }
+  }
+}
+*/
+
+.menu--main {
+  &.block {
+    margin: 0 0 $medium;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding: $xx-small $large;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    @media #{$wide} {
+      margin-left: -$large;
     }
   }
 }
 
-.dropdown-menu {
+
+
+.dropdown .dropdown-menu {
+  margin-top: 0;
+
   .dropdown-item {
+    padding: 0;
+
     a {
+      display: block;
+      padding: $xx-small $large;
+      font-size: $h6-font-size;
+
+      span {
+        border-bottom-width: $border-width-heavy;
+        border-bottom-style: $border-style;
+        padding-bottom: $xxx-small;
+      }
+
       &:hover,
-      &:focus {}
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 }
 
 // Button for toggling the navbar when in its collapsed state
-.navbar-toggler {}
+.navbar-toggler {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+
+        .navbar-nav {
+          .nav-link {
+            padding-right: 0.5rem !important;
+            padding-left: 0.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.navbar.navbar-global {
+  background-color: #c8102e;
+  border-radius: 0;
+  border-width: 0;
+  margin-bottom: 0;
+  padding: 0;
+  min-height: 36px;
+}
+
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  display: none;
+}
+a.back-to-top.btn.btn-primary {
+  padding: 11px 16px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  border: 1px solid #c8102e;
+  color: #c8012e;
+}
+/* a.btn.btn-primary:hover {
+  background-color: #c8102e;
+  color:#ffffff;
+}
+*/
+@media (min-width: 1200px){
+}
+@media (min-width: 922px){
+}
+@media (max-width: 768px){
+}
+@media (max-width: 767px) {
+  ol.breadcrumb {
+    display: none;
+ }
+  .slide_elements {
+    width: 100%;
+    position: relative;
+    padding: 0 10px !important;
+    left: 0;
+    transition: 500ms all;
+ }
+  .slide_elements.open {
+    left: -87%;
+ }
+}
+
+/*main menu styles*/
+.navbar {
+  position: relative;
+  bottom: 0px;
+  margin-bottom: 0px;
+  border: 0px solid transparent;
+}
+#main-nav .navbar-nav{
+  bottom: 0;
+  right:1rem;
+  position: absolute;
+}
+.bg-niured {
+  background-color: #c8102e;
+}
+.bg-primary {
+  background-color: #c8102e !important;
+}
+/*.bg-light {
+  */
+ /* background-color: #FFF !important;
+  */
+ /* 
+}
+*/
+.navbar.navbar-light {
+  background-color:#fff;
+  border-radius:0px;
+  border-width:0px;
+  margin-bottom: 0;
+}
+.navbar.navbar-dark {
+ /* background-color:#000;
+  */
+  border-radius:0px;
+  border-width:0px;
+  margin-bottom: 0;
+  position: relative;
+}
+.bg-dark {
+  background-color: #000!important;
+}
+.navbar.navbar-home {
+  background-color:#c8102e;
+  border-radius:0px;
+  border-width:0px;
+  margin-bottom: 0;
+}
+#main-navigation ul.nav.justify-content-end{
+  float:none;
+  position:absolute;
+  right:.9375rem;
+  bottom:0;
+}
+nav.navbar.navbar-light .nav>li>a, nav.navbar.navbar-dark .nav>li>a, nav.navbar.navbar-home .nav>li>a{
+  position: relative;
+  display: block;
+  padding: .0625rem .9375rem;
+  font-size:1.125rem;
+  color:#58595A;
+}
+nav.navbar.navbar-light .nav>li>a strong nav.navbar.navbar-dark .nav>li>a strong nav.navbar.navbar-home.nav>li>a strong{
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 600;
+}
+nav.navbar.navbar-dark .nav>li>a, nav.navbar.navbar-home .nav>li>a {
+  color:#fff;
+  border-bottom:4px solid #000;
+}
+nav.navbar.navbar-dark .nav>li>a strong nav.navbar.navbar-home.nav>li>a strong{
+  color:#fff;
+}
+.navbar-light.navbar-nav>.open>a, .navbar-light .navbar-nav>.open>a:focus, .navbar-light .navbar-nav>.open>a:hover {
+  color: #c8102e;
+  background-color: #ffffff;
+  border-bottom:0px solid #c8102e;
+}
+.navbar-dark .navbar-nav>.open>a, .navbar-dark .navbar-nav>.open>a:focus, .navbar-dark .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #c8102e;
+  border-bottom:0px solid #c8102e;
+}
+.navbar-home.navbar-nav>.open>a, .navbar-home .navbar-nav>.open>a:focus, .navbar-home .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #c8102e;
+  border-bottom:0px solid #c8102e;
+}
+#slidemenu > .breadcrumb {
+  padding: 12px 0 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0px;
+  text-align: right;
+  color:#fff;
+}
+#slidemenu > .breadcrumb>li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\203A";
+}
+#slidemenu > .breadcrumb>li+li:first-child:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\203A";
+}
+#slidemenu > .breadcrumb a {
+  color:#c8201e;
+}
+/*** dropdown-menu styles ***/
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  z-index: 1031;
+  min-width: 140px;
+  padding: 10px 0 5px 0;
+  margin: 0;
+  font-size: 12px;
+  background-color: rgba(200, 16, 46, .8);
+  -webkit-background-clip: padding-box;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.navbar-nav .dropdown-menu.show {
+  display: block;
+}
+.dropdown-menu > li > a, .dropdown-menu li, .navbar-global .dropdown .dropdown-menu a.dropdown-item {
+  display: block;
+  font-size: 13px;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #fff;
+  white-space: inherit;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+  background-color: rgba(143, 12, 43, .8) !important;
+}
+.navbar-collapse > .breadcrumb li {
+  font-size: 13px;
+}
+.breadcrumb>li+li:first-child::before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "\00BB";
+}
+.dropdown .divider {
+  border-top: 1px solid #fff;
+  line-height: 1px;
+  margin: 5px 0;
+  position: relative;
+  display: block;
+}
+@media (min-width:321px) and (max-width: 991px){
+  .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+ }
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #ffffff;
+ }
+}
+@media (max-width: 320px){
+  .navbar-collapse > .breadcrumb {
+    display:none;
+ }
+  #main-nav ul.nav.navbar-nav.navbar-right {
+    float: left;
+    position:relative;
+    right: 0;
+    bottom: 0;
+ }
+  .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+ }
+  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #ffffff;
+ }
+  .back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 375px;
+    right: 20px;
+    display: none;
+ }
+}

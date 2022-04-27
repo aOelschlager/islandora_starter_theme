@@ -5,10 +5,15 @@ global-styling:
     js/bootstrap.min.js: {}
     js/barrio.js: {}
     js/custom.js: {}
+    js/niu-features.js: {}
+    js/slideout-menu.js: {}
   css:
     component:
       css/style.css: {}
       css/color.css: {}
+      css/print.css: { media: print }
+      css/custom.css: {}
+      css/niu-styles-theme4.0.css: {}
   dependencies:
     - core/jquery
     - core/drupal

@@ -16,12 +16,42 @@
 }
 
 
+// Banner image
+.page__row--has-bg {
+  height: 26vh;
+  max-height: 26em;
+  min-height: 12em;
+  background-size: cover;
+  background-position: center;
+}
+
+.highlighted {
+  height: 26vh;
+  max-height: 26em;
+  min-height: 12em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://islandora.traefik.me/_flysystem/fedora/2022-02/lf-lokapala-001-l_36_pba_176_ff_160v-161r.jpg');
+  border-top: 4px solid #d2d3d3; 
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 // Block defaults
 .block {
   margin: $global-padding 0;
 
   @media #{$tablet} {
     margin: $x-large 0;
+  }
+}
+
+.block--regioncard.block {
+  margin: 0.5rem 0;
+
+  @media #{$tablet} {
+    margin: 0.5rem 0;
   }
 }
 

@@ -64,7 +64,7 @@ $base-color               : #000000;
 // -----------------------------------------------------------------------------
 $text-color               : #1a2747;
 $text-color-light         : #dbf5ea;
-$text-color-medium        : #0c7040;
+$text-color-medium        : #c8102e;
 
 $text-background-color-light  : $text-color-light;
 $text-background-color-normal : #ffffff;
@@ -76,7 +76,7 @@ $site-name : $text-color-medium;
 // Link colors
 // -----------------------------------------------------------------------------
 $link-color               : $text-color-medium;
-$link-alt-color           : #0e924f;
+$link-alt-color           : #8f0c21;
 $link-hover-color         : $link-alt-color;
 $link-active-color        : $link-alt-color;
 $link-visited-color       : $link-alt-color;
@@ -92,7 +92,7 @@ $border-width-heavy       : 0.25rem;
 $border-style             : solid;
 $border-color             : #e5e5e5;
 $border-color-light       : #f5f5f5;
-$border-color-alt         : #a4e5c0;
+$border-color-alt         : rgba(210, 211, 211, 0.5);
 $border-radius            :  0.125em;
 $border-radius-round      : 1em;
 $pagination-active-border-color : $border-color;
@@ -292,7 +292,7 @@ $menu-arrows                       : true;
 // -----------------------------------------------------------------------------
 
 $resp-menu-color                   : $page-navbar-color;
-$resp-menu-background-color        : $page-navbar-background-color;
+$resp-menu-background-color        : rgba(200, 16, 46, .8);
 
 $resp-menu-hover-color             : $page-navbar-background-color;
 $resp-menu-active-color            : $page-navbar-background-color;

@@ -29,7 +29,7 @@ body {
 
 // Links.
 a {
-  color: $link-color;
+  color: #c8102e;
 
   &:visited {
     //color: $link-color; // or use $link-visited-color
@@ -42,7 +42,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $link-hover-color;
+    color: #8f0c21;
   }
 }
 
@@ -600,7 +600,7 @@ h2, .h2 {
 
     &:hover,
     &:focus {
-      color: $page-background-color;
+      color: #ccc;
     }
   }
 }
@@ -680,19 +680,26 @@ h2, .h2 {
 }
 
 .dropdown .dropdown-menu {
-  background-color: $resp-menu-background-color;
+  background-color: rgba(200, 16, 46, .8);
   border-color: $resp-menu-color;
+
+  .dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(143, 12, 43, .8);
+  }
 
   .dropdown-item,
   .dropdown-item.active,
   .dropdown-item:active {
-    color: $resp-menu-color;
-    background-color: $resp-menu-background-color;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(200, 16, 46, .8);
   }
 
   .dropdown-item a {
     color: $resp-menu-color;
-    background-color: $resp-menu-background-color;
+    background-color: rgba(200, 16, 46, .8);
 
     span {
       border-color: transparent;
@@ -1918,7 +1925,7 @@ input.cke_dialog_ui_input_password {
  }
 
  .site-footer {
-     background: $accent-shade !important;
+     background: #000 !important;
  }
 
  .menu--main li a {
@@ -1933,15 +1940,346 @@ input.cke_dialog_ui_input_password {
      text-decoration: none;
  }
 
- .card-group img {
-     margin: 0;
-     width: 100%;
-     height: auto;
+ .block--collectioncard h1 {
+   margin: 3.625rem 0 1.625rem 0;
+   text-align: center;
  }
 
- .card-group .field--type-image {
-     margin: 0
+ .block--collectioncard p {
+   text-align: center;
  }
+
+ .block--collectioncard .row {
+   justify-content: center;
+ }
+
+ .block--collectioncard p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+ }
+
+ .block--regioncard .card {
+    border-bottom: 4px solid #d2d3d3 !important;
+}
+
+.block--regioncard .accordion {
+  margin: 0.5rem 0;
+
+  @media #{$tablet} {
+    margin: 0.5rem 0;
+  }
+}
+
+ .block--regioncard h1 {
+  margin: 3.625rem 0 1.625rem 0;
+  border-top: 4px solid #d2d3d3 !important;
+  padding-top: 1rem;
+}
+
+.block--regioncard .row {
+  justify-content: center;
+}
+
+.block--topiccard h1 {
+  margin: 3.625rem 0 1.625rem 0;
+  text-align: center;
+}
+
+.block--topiccard p {
+  text-align: center;
+}
+
+.block--topiccard .row {
+  justify-content: center;
+}
+
+.block--topiccard p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+}
+
+.container .image-container {
+  padding: 1em 2em 2em; 
+  background: url('https://www.niu.edu/images/niu-shield-pattern-white-bg.jpg') no-repeat top center; 
+  border-top: 4px solid #d2d3d3; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.block--whatsnewcard h1 {
+  margin: 0 0 1.625rem 0;
+}
+
+.block--whatsnewcard .row {
+  justify-content: center;
+}
+
+.block--whatsnewcard p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.block--whatsnewcard .card {
+  margin: 3.625rem 0 0 0;
+  background: transparent;
+}
+
+.block--whatsnewcard .card .card-img .img{
+  padding: 5% 5% 5% 5%;
+}
+
+.block--indonesiaresourcecard {
+  margin: 1.625rem 0 1.625rem 0;
+  border-top: 4px solid #d2d3d3 !important;
+  background-color: rgba(210,211,211,.5);
+}
+
+.block--indonesiaresourcecard .card{
+  padding-top: 2rem;
+}
+
+.block--indonesiaresourcecard .b-style{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.block--indonesiacardcollection .b-style{
+  padding-bottom: 2rem;
+}
+
+.card-group img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.card-group .field--type-image {
+  margin: 0
+}
+
+.card-img-top {
+  width: 100%;
+  height: 26vh;
+  object-fit: cover;
+}
+
+.field--block-content--collection-card .card-body {
+  text-align: center;
+  padding: 0 0.65rem 0.65rem 0.65rem;
+}
+
+.field--block-content--collection-card .card-body a {
+  font-size: 18px; 
+}
+
+#block-regioncard {
+  border-bottom: 4px solid #d2d3d3 !important;
+  padding-bottom: 1rem;
+}
+
+.field--block-content--region-card .card-body {
+  padding: 10% 5% 5% 5%;
+}
+
+.field--block-content--region-card .card-body .card-link {
+  font-size: 24px;
+}
+
+.field--block-content--indonesia-card .card-body {
+  padding: 10% 5% 5% 5%;
+}
+
+.field--block-content--indonesia-card .card-body .card-title {
+  font-size: 24px;
+  color: #c8102e;
+}
+
+.field--block-content--topic-card .card {
+  padding-top: 5%;
+  background-color: rgba(210,211,211,.5);
+}
+
+.field--block-content--topic-card .card .card-body .card-link{
+  font-size: 22px;
+}
+
+.field--block-content--topic-card .card .footer {
+  background-color: white !important;
+  color: white;
+}
+
+.field--block-content--whats-new-card .card-body {
+  padding: 0 10% 0 10%;
+}
+
+.field--block-content--region-map-links-card svg {
+  display: block;
+  width: 100%;
+}
+
+.field--block-content--region-map-links-card svg g path.on {
+  fill: red;
+}
+
+.field--block-content--region-map-links-card div ul {
+  margin: 0;
+  padding: 0;
+  columns: 100px auto;
+  column-gap: 8px;
+  list-style: none;
+}
+
+.field--block-content--region-map-links-card div ul.list-of-countries li {
+  padding: 2px 4px;
+  display: inline-block;
+  width: 100%;
+}
+
+.field--block-content--region-map-links-card div ul li.on {
+  background-color: red;
+  a {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.field--block-content--region-map-links-card div ul li:hover {
+  background-color: red;
+  a {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.list-of-countries-item:hover,
+.list-of-countries-item.active {
+  background-color: red;
+  a {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.field--block-content--region-map-links-card svg g path:hover {
+  fill: red;
+}
+
+.field--block-content--region-map-links-card svg g path.active {
+  fill: red;
+}
+
+.field--block-content--region-google-map-block.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.field--block-content--region-google-map-block .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.field--block-content--lesson-plans .card-img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+// Bootstrap resets
+.card {
+  border: none;
+}
+.card-img {
+  border-radius: 0;
+}
+
+.resource-cards .h1 {
+  margin: 0 0 1.625rem 0;
+}
+
+.vgr-cards {
+  .card {
+    display: flex;
+    flex-flow: wrap;
+    flex: 100%;
+    margin-bottom: 40px;
+
+    &:nth-child(even) .card-img-body {
+      order: 2;
+    }
+
+    &:nth-child(even) .card-body {
+      padding-left: 0;
+      padding-right: 1.25rem; 
+    }
+    
+    @media (max-width: 576px) {
+      display: block;
+    }
+    
+  }
+
+  .card-img-body {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    
+    @media (max-width: 576px) {
+      width: 100%;
+      height: 200px;
+          margin-bottom: 20px;
+    }
+    
+  }
+  
+  .card-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+    @media (max-width: 1140px) {
+          margin: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+    }
+    
+  }
+
+  .card-body {
+    flex: 2;
+    padding: 0 0 0 1.25rem;
+    
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+    
+  }
+}
+
+.region-image .card-img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
 
  .slick {
      width: 100%;

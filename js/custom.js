@@ -12,7 +12,6 @@
 
       // Custom code here
 
-    }
-  };
+  }};
 
 })(jQuery, Drupal);

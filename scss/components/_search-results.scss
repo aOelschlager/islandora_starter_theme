@@ -37,3 +37,6 @@
 .path-browse-collections {
   .search-results__header .sort__container {}
 }
+
+// Prevent contextual menu links from breaking grid layouts
+//.contextual, div[data-contextual-id] {position:absolute;z-index:500;top:-16px;right:0;}

@@ -42,3 +42,29 @@
   if ($fonts)
     $variables['#attached']['library'][] = (in_array($fonts, ['opensans']) ? 'islandora_starter_theme' : 'bootstrap_barrio' ) . '/' . $fonts;
 }
+
+
+//function islandora_starter_theme_preprocess_field__entity_reference(&$variables) {
+//  /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+//  $entity = $variables['element']['#object'];
+//  $target_entity = $entity
+//    ->getFieldDefinition($variables['field_name'])
+//    ->getSetting('target_type');
+
+//  if ($target_entity == 'block_content') {
+    // Loop over our blocks and pass UUIDs into templates to be used by Twig Tweak.
+//    foreach ($variables['items'] as &$item) {
+//      $item['block_uuid'] = $item['content']['#block_content']->uuid();
+//    }
+//  }
+//}
+
+
+/*
+function islandora_starter_theme_preprocess_field(&$variables) {
+
+  if ($variables['field_type'] == 'image' && $variables['element']['#view_mode'] == 'card') {
+    $variables['attributes']['class'][] = 'card-img-top';
+
+}
+*/
