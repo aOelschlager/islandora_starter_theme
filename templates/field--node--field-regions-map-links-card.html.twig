@@ -43,7 +43,7 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
-    'block--regioncard',
+    'block--regionmaplink',
   ]
 %}
 {%
@@ -52,7 +52,7 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-<div class="container block--regioncard">
+<div class="container block--regionmaplink">
   {% if label_hidden %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>

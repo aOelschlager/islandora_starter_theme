@@ -43,8 +43,7 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
-    'block--countrycollectioncard',
-    'block--indonesiacardcollection',
+    'block--regioncard',
   ]
 %}
 {%
@@ -53,12 +52,21 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-<div class="container block--indonesiacardcollection">
-  <div class="block--countrycollectioncard">
-    <h1>Browse By Collection</h1>
+<div class="accordion" id="accordionExample6">
+  <div class="card">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          <strong>How do I cite a SEADL item?</strong>
+        </button>
+      </h2>
+    </div>
+    {% if label_hidden %}
+      {% for item in items %}
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample6">
+          <div{{ attributes.addClass(classes, 'field__item card-body') }}>{{ item.content }}</div>
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
-  {% if label_hidden %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item row row-cols-1 row-cols-md-4 g-4') }}>{{ item.content }}</div>
-    {% endfor %}
-  {% endif %}
+</div>

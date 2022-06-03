@@ -1960,8 +1960,30 @@ input.cke_dialog_ui_input_password {
     height: 200px;
  }
 
+ .block--countrycollectioncard h1 {
+  padding-top: 3.625rem;
+  border-top: 4px solid #d2d3d3 !important;
+  text-align: center;
+}
+
+.block--countrycollectioncard p {
+  text-align: center;
+}
+
+.block--countrycollectioncard .row {
+  justify-content: center;
+}
+
+.block--countrycollectioncard p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+}
+
  .block--regioncard .card {
     border-bottom: 4px solid #d2d3d3 !important;
+    padding-bottom: 2rem;
 }
 
 .block--regioncard .accordion {
@@ -1975,11 +1997,64 @@ input.cke_dialog_ui_input_password {
  .block--regioncard h1 {
   margin: 3.625rem 0 1.625rem 0;
   border-top: 4px solid #d2d3d3 !important;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .block--regioncard .row {
   justify-content: center;
+}
+
+.block--countrycard .accordion {
+  margin: 0.5rem 0;
+
+  @media #{$tablet} {
+    margin: 0.5rem 0;
+  }
+}
+
+ .block--countrycard h1 {
+  margin: 3.625rem 0 1.625rem 0;
+  border-top: 4px solid #d2d3d3 !important;
+  padding-top: 1rem;
+}
+
+.block--countrycard .row {
+  justify-content: center;
+}
+
+.block--resourcemaplink .accordion {
+  margin: 0.5rem 0;
+
+  @media #{$tablet} {
+    margin: 0.5rem 0;
+  }
+}
+
+.block--resourcemaplink h1 {
+margin: 3.625rem 0 1.625rem 0;
+padding-top: 1rem;
+}
+
+.block--resourcemaplink .row {
+justify-content: center;
+border-top: 4px solid #d2d3d3 !important;
+}
+
+.block--regionmaplink .accordion {
+  margin: 0.5rem 0;
+
+  @media #{$tablet} {
+    margin: 0.5rem 0;
+  }
+}
+
+.block--regionmaplink h1 {
+margin: 3.625rem 0 1.625rem 0;
+padding-top: 1rem;
+}
+
+.block--regionmaplink .row {
+justify-content: center;
 }
 
 .block--topiccard h1 {
@@ -2020,13 +2095,12 @@ input.cke_dialog_ui_input_password {
   justify-content: center;
 }
 
-.block--whatsnewcard p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+.block--whatsnewcard .card-text {
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; 
+  -webkit-box-orient: vertical;
 }
 
 .block--whatsnewcard .card {
@@ -2051,10 +2125,6 @@ input.cke_dialog_ui_input_password {
 .block--indonesiaresourcecard .b-style{
   padding-top: 2rem;
   padding-bottom: 1rem;
-}
-
-.block--indonesiacardcollection .b-style{
-  padding-bottom: 2rem;
 }
 
 .card-group img {
@@ -2209,8 +2279,14 @@ input.cke_dialog_ui_input_password {
   border-radius: 0;
 }
 
-.resource-cards .h1 {
+.resource-cards h1 {
   margin: 0 0 1.625rem 0;
+  padding-top: 5%;
+}
+
+.essay-cards h1 {
+  margin: 0 0 1.625rem 0;
+  text-align: center;
 }
 
 .vgr-cards {
