@@ -35,12 +35,16 @@
      'bg-transparent' => t('Transparent'),
    ];
    $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['opensans'] = 'Open Sans';
+   $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['roboto'] = 'Roboto';
+   $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['sansita_swashed'] = 'Sansita Swashed';
+   $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['arimo'] = 'Arimo';
+   $form['fonts']['fonts']['bootstrap_barrio_google_fonts']['#options']['tinos'] = 'Tinos';
  }
 
  function islandora_starter_theme_preprocess_page(&$variables) {
   $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
   if ($fonts)
-    $variables['#attached']['library'][] = (in_array($fonts, ['opensans']) ? 'islandora_starter_theme' : 'bootstrap_barrio' ) . '/' . $fonts;
+    $variables['#attached']['library'][] = (in_array($fonts, ['opensans', 'roboto', 'sansita_swashed', 'arimo', 'tinos']) ? 'islandora_starter_theme' : 'bootstrap_barrio' ) . '/' . $fonts;
 }
 
 

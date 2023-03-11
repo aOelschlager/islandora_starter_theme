@@ -103,7 +103,7 @@
       {% endif %}
       {# Build a domain URL. This should be moved into a yml variable. #}
 
-{#	  <div class="highlighted page__row--has-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://islandora.traefik.me/cantaloupe/iiif/2/https%3A%2F%2Fislandora.traefik.me%2F_flysystem%2Ffedora%2F2022-02%2Flf-lokapala-001-l_36_pba_176_ff_160v-161r.jpg/full/full/0/default.jpg');border-top: 4px solid #d2d3d3 !important">    #}
+{#	  <div class="highlighted page__row--has-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://seadl.diglibrary.dev/cantaloupe/iiif/2/https%3A%2F%2Fseadl.diglibrary.dev%2Fsites%2Fdefault%2Ffiles%2F2023-03%2Fnew_banner.jpg/full/full/0/default.jpg');border-top: 4px solid #d2d3d3 !important">    #}
 
       {% set site_url = url("<current>") %}
       {% set domain = (site_url|render|render|split('/')[0] ~ '//' ~ site_url|render|render|split('/')[2])|lower %}

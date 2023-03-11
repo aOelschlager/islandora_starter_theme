@@ -2266,6 +2266,11 @@ justify-content: center;
   height: 100%;
 }
 
+.field.block--linkscard.card-body {
+  padding-bottom: 0rem !important;
+  margin-bottom: 0px !important;
+}
+
 .field--block-content--lesson-plans .card-img {
   padding-left: 2rem;
   padding-right: 2rem;

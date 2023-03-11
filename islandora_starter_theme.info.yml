@@ -9,6 +9,7 @@ base theme: islandora_base_theme
 libraries:
   - islandora_starter_theme/global-styling
 libraries-override:
+  #islandora_base_theme/global-styling: false
   bootstrap_barrio/global-styling: false
   bootstrap_barrio/file: false
 regions:
