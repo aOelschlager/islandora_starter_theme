@@ -33,7 +33,7 @@ const paths = {
     jquery: './node_modules/jquery/dist/jquery.min.js',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     poppermap: './node_modules/popper.js/dist/umd/popper.min.js.map',
-    barrio: '../../../../../../web/themes/contrib/bootstrap_barrio/js/barrio.js',
+    barrio: '*/*/*/*/*/*/web/themes/contrib/bootstrap_barrio/js/barrio.js',
     dest: './js'
   }
 }
