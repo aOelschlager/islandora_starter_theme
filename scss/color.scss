@@ -1273,7 +1273,7 @@ button,
 .form-actions {
   .button + .button {
     color: $button-secondary-text-color;
-    background-color: $button-secondary-background-color;
+    background-color: lightgray;
     border-color: $button-secondary-border-color;
 
     &:hover,

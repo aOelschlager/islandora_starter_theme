@@ -1113,16 +1113,16 @@
 
  main a {
 	 color: #58595a;
-}
+/*}
  main a:not(.border-bottom-0):not(.btn):not(.nav-link):not(.dropdown-item):not(.nav-tabs):not(.nav-link):not(.icon-link):not(.buttonbutnot):not(.social):not(.faq_question):not(.img-link):not(.page-link):not(.blockquote-footer):not(.carousel-control-prev):not(.carousel-control-next){
-	 box-shadow: inset 0 -1px 0 #c8102e, inset 0 -1px 0 #c8102e;
+	 box-shadow: inset 0 -1px 0 #c8102e, inset 0 -1px 0 #c8102e; */
 }
  main a:hover {
 	 color: #262626;
 	 text-decoration:none;
-}
+/*}
  main a:hover:not(.border-bottom-0):not(.btn):not(.nav-link):not(.dropdown-item):not(.nav-tabs):not(.nav-link):not(.icon-link):not(.buttonbutnot):not(.social):not(.img-link):not(.page-link):not(.blockquote-footer):not(.carousel-control-prev):not(.carousel-control-next){
-	 box-shadow: inset 0 -1px 0 #a5a7a8, inset 0 -1px 0 #a5a7a8;
+	 box-shadow: inset 0 -1px 0 #a5a7a8, inset 0 -1px 0 #a5a7a8; */
 }
  strong {
 	 font-style: normal;

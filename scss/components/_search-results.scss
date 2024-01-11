@@ -12,6 +12,18 @@
 
 .facet-item {}
 
+.facet-item__status_nonactive .facet-item__value,
+.facets-soft-limit-link {
+  max-width: 100%;
+  overflow: hidden;
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    border-bottom-style: none;
+  }
+}
 
 // Search views List/Grid
 .view-list,

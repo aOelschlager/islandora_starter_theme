@@ -70,6 +70,21 @@ $h6-font-size: $base-font-size * 1.125;
 $link-decoration: none;
 $link-hover-decoration: underline;
 
+article,
+details,
+.site-footer .nav-item,
+.site-footer .field__item {
+  a:not(.button) {
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      border-bottom-style: none;
+    }
+  }
+}
+
 // =============================================================================
 //
 //      Typography
