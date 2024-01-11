@@ -24,7 +24,7 @@
     // Remove the margin on inline field labels to preserve vertical formatting.
     .field__label {
       margin: 0;
-      display: inline-block;
+//      display: inline-block;
       padding: 0 $xxxx-small 0 0; // LTR
  
       &:after {
