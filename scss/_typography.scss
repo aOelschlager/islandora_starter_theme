@@ -66,6 +66,10 @@ $h6-font-size: $base-font-size * 1.125;
   font-size: $h5-font-size;
 }
 
+h3.whatsnew {
+  clear: none !important;
+}
+
 // Style anchor elements.
 $link-decoration: none;
 $link-hover-decoration: underline;

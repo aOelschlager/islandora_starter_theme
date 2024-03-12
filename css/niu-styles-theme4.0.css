@@ -1112,7 +1112,7 @@
 }
 
  main a {
-	 color: #58595a;
+	 color: #c8102e;
 /*}
  main a:not(.border-bottom-0):not(.btn):not(.nav-link):not(.dropdown-item):not(.nav-tabs):not(.nav-link):not(.icon-link):not(.buttonbutnot):not(.social):not(.faq_question):not(.img-link):not(.page-link):not(.blockquote-footer):not(.carousel-control-prev):not(.carousel-control-next){
 	 box-shadow: inset 0 -1px 0 #c8102e, inset 0 -1px 0 #c8102e; */
@@ -1363,6 +1363,10 @@
 	 top: 10px;
 }
 */
+.accordion .card a{
+	color: #c8102e;
+}
+
 /* Fix for having a third column on the same page as a slideshow */
  @media (min-width: 768px) and (max-width: 991px) {
 	 .right_col_underslider_fix {

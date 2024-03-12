@@ -25,6 +25,10 @@
   }
 }
 
+a.facets-soft-limit-link {
+  font-weight: 700;
+}
+
 // Search views List/Grid
 .view-list,
 .view-grid {
@@ -35,6 +39,15 @@
   .node__content {}
 }
 
+// Search views List/Grid
+
+.node__details {
+  .view-list .views-row {
+     .views-label {
+      font-weight: 700;
+    }
+  }
+}
 
 .view-grid .search-results__content {
   @media #{$tablet} {}

@@ -3,3 +3,23 @@
  * - set element global styles, basically whenever this element appears
  *   it should look like this by default.
  ============================================================================ */
+// Links.
+a {
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+  
+    &:active,
+    &:hover {}
+  
+    &:link,
+    &:visited {}
+  
+    &:active,
+    &.active {}
+  
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
